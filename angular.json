@@ -28,7 +28,10 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "sass/themes/tailwind/tailwind-light/theme.scss",
               "src/styles.scss"
+              
             ],
             "scripts": []
           },

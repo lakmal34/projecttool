@@ -1,1 +1,207 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+a{
+    cursor: pointer;
+}
+
+.sideMenu{
+    width:240px;
+    background-color: $primary;
+    height: 100vh;
+
+    .brand-section{
+        width:100%;
+        padding: 16px 24px;
+
+        .logo-compact{
+            display: none;
+        }
+        .logo-default{
+            display: block;
+        }
+    }
+
+    .menu-section{
+        padding:24px 16px 24px 16px;
+
+        p-panelmenu{
+            display: block;
+        }
+        p-tieredmenu{
+            display: none;
+        }
+
+        .p-panelmenu-header{
+            border: none;
+        }
+
+        .p-highlight{
+            .p-panelmenu-header-link{
+                background-color: transparent !important;
+                color: #fff;
+                border:none !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .p-panelmenu-header-link{
+            flex-grow: 1 !important;
+            padding: 8px 12px 8px 12px;
+            background-color: transparent;
+            color: #fff;
+            border:none !important;
+            box-shadow: none !important;
+            border-radius: 4px !important;
+
+            &:hover{
+                background-color: $blue-400 !important;
+                color: #fff !important;
+                border:none !important;
+                box-shadow: none !important;
+            }
+        }
+
+        .p-menuitem-icon{
+            line-height: 24px;
+        }
+
+        .p-panelmenu-icon{
+            order:1 !important;
+            line-height: 24px;
+        }
+
+        .p-menuitem-text{
+            flex-grow: 1 !important;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .p-panelmenu-content{
+            background-color: transparent;
+            color: #fff;
+            border:none !important;
+            box-shadow: none !important;
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+
+            .p-menuitem {
+                margin-bottom: 8px;
+            }
+
+            .p-menuitem-link{
+                padding-top: 8px;
+                padding-bottom: 8px;
+                padding-left: 40px;
+                border-radius: 4px !important;
+                .p-menuitem-icon{
+                    color: #fff !important;
+                }
+                .p-menuitem-text{
+                    color: #fff !important;
+                }
+                &:hover{
+                    background-color: $blue-400 !important;
+                    color: #fff !important;
+                    border:none !important;
+                    box-shadow: none !important;
+                }
+                &:focus{
+                    background-color: $blue-400 !important;
+                    color: #fff !important;
+                    border:none !important;
+                    box-shadow: none !important;
+                }
+            }
+            
+        }
+
+    }
+
+    &.collpased{
+        width: 86px;
+
+        .brand-section{
+            width:100%;
+            padding: 16px 24px;
+
+            .logo-default{
+                display: none;
+            }
+            .logo-compact{
+                display: block;
+            }
+
+        }
+
+        .menu-section{
+            p-panelmenu{
+                display: none;
+            }
+            p-tieredmenu{
+                display: block;
+            }
+        }
+
+        .p-tieredmenu{
+            padding: 0px !important;
+            background:transparent !important;
+            border: none !important;
+            border-radius: 4px !important;
+            width: auto !important;
+
+            .p-menuitem-active{
+                .p-menuitem-link{
+                    background-color: $blue-400 !important;
+                    box-shadow: none !important;
+                }
+            }
+            .p-menuitem-link{
+                background-color: transparent !important;
+                box-shadow: none !important;
+                border-radius: 4px;
+                &:hover{
+                    background-color:$blue-400 !important;
+                }
+            }
+            .p-submenu-list{
+                
+                .p-menuitem-link{
+                    background-color: transparent !important;
+                    border-radius: 0px;
+                    &:hover{
+                        background-color:$blue-100 !important;
+                    }
+                }
+            }
+
+
+            .p-menuitem{
+                .p-menuitem-icon{
+                    margin-right: 0px;
+                    color:#fff !important;
+                }
+                .p-submenu-icon{
+                    display: none;
+                }
+            }
+
+            .p-submenu-list{
+                width: 160px;;
+            }
+
+            
+        }
+
+    }
+}
